@@ -12,5 +12,11 @@
     {
       "link1": "https://www.google.com/"
     }
+  ],
+  "header-links": [
+    {
+      "url": "https://www.facebook.com/",
+      "label": "facebook"
+    }
   ]
 }
