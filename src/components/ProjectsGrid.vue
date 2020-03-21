@@ -8,9 +8,6 @@
                 class="thumbnail"
             />
             <h3 class="project-title">{{ item.node.title }}</h3>
-            <div class="categories">
-                <span class="category" v-for="(item, index) in item.node.categories" :key="index">{{ item }}</span>
-            </div>
             </g-link>
         </div>
     </div>
@@ -29,6 +26,7 @@ export default {
 
 <style scoped>
 .projects {
+  margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4rem;
@@ -65,14 +63,4 @@ export default {
   transform: scale(1.02);
   box-shadow: 0 20px 40px -20px rgba(0,0,0,0.25);
 }
-
-@media (min-width: 920px) {
-  .project {
-    grid-column: auto / span 1;
-  }
-  .project:nth-child(3n+1) {
-    grid-column: auto / span 2;
-  }
-}
-
 </style>
