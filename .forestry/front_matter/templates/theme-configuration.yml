@@ -27,7 +27,7 @@ fields:
   type: text
   hidden: false
   default: ''
-- name: header-links
+- name: headerLinks
   type: field_group_list
   fields:
   - name: url
@@ -44,7 +44,7 @@ fields:
     min: 
     max: 
     labelField: 
-  label: header-links
+  label: Header Links
   description: Links on header
 pages:
 - data/theme.json
