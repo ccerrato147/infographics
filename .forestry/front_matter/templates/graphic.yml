@@ -11,3 +11,5 @@ fields:
   label: Title
   config:
     required: true
+pages:
+- graphics/coronavirus.md
