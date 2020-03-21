@@ -27,8 +27,19 @@ fields:
   type: text
   hidden: false
   default: ''
-- type: boolean
-  name: dark_mode
-  label: Dark mode
+- name: links
+  type: field_group_list
+  fields:
+  - name: link1
+    type: text
+    config:
+      required: false
+    label: Link1
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: links
+  description: Links on header
 pages:
 - data/theme.json
