@@ -27,19 +27,24 @@ fields:
   type: text
   hidden: false
   default: ''
-- name: links
+- name: header-links
   type: field_group_list
   fields:
-  - name: link1
+  - name: url
     type: text
     config:
       required: false
-    label: Link1
+    label: url
+  - name: label
+    type: text
+    config:
+      required: false
+    label: label
   config:
     min: 
     max: 
     labelField: 
-  label: links
+  label: header-links
   description: Links on header
 pages:
 - data/theme.json
