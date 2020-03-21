@@ -46,16 +46,5 @@ fields:
     labelField: 
   label: Header Links
   description: Links on header
-- name: headerConfig
-  type: field_group
-  config: {}
-  fields:
-  - name: color
-    type: color
-    config:
-      required: false
-      color_format: Hex
-    label: color
-  label: Header Config
 pages:
 - data/theme.json
