@@ -17,13 +17,6 @@ sections:
   create: all
   match: "**/*"
   new_doc_ext: md
-- type: directory
-  path: journal
-  label: Journal
-  create: documents
-  match: "**/*.md"
-  templates:
-  - journal
 - type: document
   path: data/theme.json
   label: Theme config
