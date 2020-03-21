@@ -11,8 +11,7 @@
                 </g-link>
             </div>
             <nav class="nav right">
-                <g-link class="nav__link" to="/journal">Journal</g-link>
-                <g-link class="nav__link" to="/contact">Say Hi!</g-link>
+                <a v-for="link in settings.headerLinks" class="nav__link" target="_blank"  :href="link.url">{{link.label}}</a>
             </nav>
         </div>
     </header>
