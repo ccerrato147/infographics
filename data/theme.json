@@ -10,5 +10,8 @@
       "url": "https://www.facebook.com/",
       "label": "Facebook"
     }
-  ]
+  ],
+  "headerConfig": {
+    "color": "#B93434"
+  }
 }
