@@ -8,20 +8,6 @@ fields:
 - type: textarea
   name: site_description
   label: Site description
-- type: textarea
-  name: hero_title
-  label: Hero title
-  config:
-    wysiwyg: true
-    schema:
-      format: html
-- type: textarea
-  name: hero_subtitle
-  label: Hero subtitle
-  config:
-    wysiwyg: true
-    schema:
-      format: html
 - name: footer
   label: Footer text
   type: text
