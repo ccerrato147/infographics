@@ -2,12 +2,12 @@
 label: Graphic
 hide_body: false
 fields:
-  - type: file
-    name: thumbnail
-    label: Thumbnail
-    description: This will only show up on the front page
-  - type: text
-    name: title
-    label: Title
-    config:
-      required: true
+- type: file
+  name: thumbnail
+  label: Thumbnail
+  description: This will only show up on the front page
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
