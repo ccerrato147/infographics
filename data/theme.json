@@ -22,5 +22,11 @@
       "url": "https://www.facebook.com/",
       "label": "facebook"
     }
+  ],
+  "headerLinks": [
+    {
+      "url": "asdasd",
+      "label": "asdasdasd"
+    }
   ]
 }
