@@ -3,18 +3,16 @@
             <div class="container">
                 <div  v-if="validTabs">
                     <div  class="graphics__tabs">
-                        <button v-for="tab in graphic.tabs" v-on:click="changeTab(tab)" class="graphics__tabs__selector"
-                          :style="tabsStyle">
+                        <button v-for="(tab, index) in graphic.tabs" v-on:click="changeTab(tab)" class="graphics__tabs__selector"
+                          :style="tabsStyle" :class="{ 'graphics__tabs__selector--selected': selectedTag === tab }">
                             <span >{{tab.selector}}</span>
                         </button>
                     </div>
 
                     <div class="graphics__info" >
                         <g-image  :src="selectedTag.graphic" alt="Graphic Image" class="graphics__img"/>
-                        <p class="graphics__info__description">{{selectedTag.description}}</p>
+                        <div class="graphics__info__description" v-html="description"></div>
                     </div>
-
-
                 </div>
                 <div v-else>
                     <g-image :src="graphic.thumbnail" alt="Graphic Image" class="graphics__img"/>
@@ -27,6 +25,8 @@
 
 
 <script>
+    const markdown = require('markdown').markdown
+    console.log(markdown)
     export default {
         name: 'tabs',
         data: function () {
@@ -57,18 +57,18 @@
             },
             validTabs: function () {
                 return (this.graphic !== null &&  this.graphic.tabs.length > 0);
+            },
+            description () {
+              return markdown.toHTML(this.selectedTag.description)
             }
-        }
+        },
     }
 </script>
 
 <style lang="scss" scoped>
     $content-gutter: 2rem;
-    .container {
-        padding: 8rem 0 4rem 0;
-
-    }
     .graphics {
+        margin-top: 8rem;
         &__info {
             img{
                 display: inline-block;
@@ -88,16 +88,20 @@
             display: inline-block;
             width: 100%;
             background-color: red;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
 
             &__selector {
                 display: inline-block;
-
                 border: none;
                 outline: none;
                 cursor: pointer;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 10px;
+                font-weight: bold;
             }
-            &__selector:hover {
+            &__selector:hover, &__selector--selected {
                 background-color: #ddd;
             }
         }
