@@ -26,7 +26,6 @@
 
 <script>
     const markdown = require('markdown').markdown
-    console.log(markdown)
     export default {
         name: 'tabs',
         data: function () {
@@ -59,7 +58,8 @@
                 return (this.graphic !== null &&  this.graphic.tabs.length > 0);
             },
             description () {
-              return markdown.toHTML(this.selectedTag.description)
+              const theDescription = this.selectedTag.description || ''
+              return markdown.toHTML(theDescription)
             }
         },
     }
