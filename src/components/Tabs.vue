@@ -97,6 +97,7 @@
             margin-bottom: 1.5rem;
 
             &__selector {
+                background-color: #5BC0BE;
                 display: inline-block;
                 border: none;
                 outline: none;
@@ -108,7 +109,7 @@
                 font-weight: bold;
             }
             &__selector:hover, &__selector--selected {
-                background-color: #ddd;
+                background-color: #53a6a4;
             }
         }
 

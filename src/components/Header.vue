@@ -26,7 +26,7 @@ export default {
 @import "src/assets/index";
 
 .header {
-    background-color: white;
+    background-color: #3A506B;
     position: relative;
     height: 6rem;
     z-index: 10;
