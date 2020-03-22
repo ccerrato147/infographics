@@ -1,7 +1,7 @@
 <template>
     <div class="graphics">
         <div v-for="{ node } in graphics" class="graphics__entry">
-            <g-link :to="{ name: 'home' }">
+            <g-link :to="node.path">
                 <g-image :src="node.thumbnail" alt="Graphic Image" class="graphics__img"/>
             </g-link>
             <div class="graphics__content">
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'graphic',
+  name: 'graphics',
   props: {
     graphics: {
       type: Array,

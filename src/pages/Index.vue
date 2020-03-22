@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="container">
-      <graphic :graphics="$page.graphics.edges"/>
+      <graphics :graphics="$page.graphics.edges"/>
     </div>
   </Layout>
 </template>
@@ -14,6 +14,8 @@ query {
         title
         description
         thumbnail
+        path
+        content
       }
     }
   }
@@ -21,11 +23,11 @@ query {
 </page-query>
 
 <script>
-import Graphic from '../components/Graphic'
+import Graphics from '../components/Graphics'
 
 export default {
   components: {
-    Graphic
+    Graphics
   }
 }
 </script>
