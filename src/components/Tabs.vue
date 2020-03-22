@@ -1,14 +1,15 @@
 <template>
         <div class="graphics">
             <div class="container">
-                <div  v-if="graphic.tabs.length > 0">
+                <div  v-if="validTabs">
                     <div  class="graphics__tabs">
                         <button v-for="tab in graphic.tabs" v-on:click="changeTab(tab)" class="graphics__tabs__selector"
                           :style="tabsStyle">
                             <span >{{tab.selector}}</span>
                         </button>
                     </div>
-                    <div class="graphics__info">
+
+                    <div class="graphics__info" >
                         <g-image  :src="selectedTag.graphic" alt="Graphic Image" class="graphics__img"/>
                         <p class="graphics__info__description">{{selectedTag.description}}</p>
                     </div>
@@ -30,13 +31,13 @@
         name: 'tabs',
         data: function () {
             return {
-                selectedTag: null
+                selectedTag: {}
             }
         },
         props: {
             graphic: {
                 type: Object,
-                default: () => [],
+                default: () => {},
                 required: true
             }
         },
@@ -53,6 +54,9 @@
                 return {
                     width: (100 / this.graphic.tabs.length) + '%',
                 };
+            },
+            validTabs: function () {
+                return (this.graphic !== null &&  this.graphic.tabs.length > 0);
             }
         }
     }

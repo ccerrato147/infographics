@@ -1,10 +1,10 @@
 <template>
     <Layout>
-        <tabs :graphic="$page.graphic"></tabs>
+        <tabs :graphic="$page.graphic || {}"></tabs>
     </Layout>
 </template>
 <script>
-    import Tabs from "../components/tabs";
+    import Tabs from "../components/Tabs";
     export default {
         components: {Tabs}
     }
