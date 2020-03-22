@@ -20,5 +20,23 @@ fields:
     schema:
       format: markdown
   label: Description
+- name: tabs
+  type: field_group_list
+  fields:
+  - name: graphic
+    type: file
+    config:
+      maxSize: 250
+    label: graphic
+  - name: selector
+    type: text
+    config:
+      required: false
+    label: selector
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: tabs
 pages:
 - graphics/aislamiento-social.md
