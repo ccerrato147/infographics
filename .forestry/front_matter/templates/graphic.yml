@@ -33,11 +33,6 @@ fields:
     config:
       required: false
     label: Selector
-  - name: description
-    type: text
-    config:
-      required: false
-    label: Description
   config:
     min: 
     max: 
