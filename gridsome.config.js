@@ -2,11 +2,11 @@
 // Learn more: https://gridsome.org/docs/config
 
 module.exports = {
-  siteName: "Portfolio",
-  siteUrl: `https://www.itsnwa.com`,
+  siteName: "Infographics",
+  siteUrl: `https://pandegraphics.com`,
   host: "0.0.0.0",
-  titleTemplate: "%s - NWA",
-  siteDescription: "Creative technologist",
+  titleTemplate: "%s",
+  siteDescription: "Información Relacionada al COVID-19 para América Latina",
   plugins: [
     {
       use: "@gridsome/source-filesystem",
