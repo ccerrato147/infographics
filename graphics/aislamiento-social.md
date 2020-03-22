@@ -8,7 +8,7 @@ tabs:
   description: Brasil
 - graphic: "/uploads/home-coronavirus.jpg"
   selector: México
-  description: Special Infographic
+  description: "# Hello"
 
 ---
 # Aislamiento Social
