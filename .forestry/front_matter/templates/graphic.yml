@@ -20,3 +20,5 @@ fields:
     schema:
       format: markdown
   label: Description
+pages:
+- graphics/aislamiento-social.md
