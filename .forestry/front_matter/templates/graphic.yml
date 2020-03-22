@@ -27,16 +27,21 @@ fields:
     type: file
     config:
       maxSize: 250
-    label: graphic
+    label: Graphic
   - name: selector
     type: text
     config:
       required: false
-    label: selector
+    label: Selector
+  - name: description
+    type: text
+    config:
+      required: false
+    label: Description
   config:
     min: 
     max: 
     labelField: 
-  label: tabs
+  label: Tabs
 pages:
 - graphics/aislamiento-social.md
