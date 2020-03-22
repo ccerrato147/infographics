@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <tabs :graphic="$page.graphic || {}"></tabs>
+        <tabs :graphic="$page.graphic "></tabs>
     </Layout>
 </template>
 <script>
