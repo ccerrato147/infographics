@@ -3,14 +3,14 @@
             <div class="container">
                 <div  v-if="graphic.tabs.length > 0">
                     <div  class="graphics__tabs">
-                        <button v-for="tab in graphic.tabs" v-on:click="selectedTag = tab.graphic" class="graphics__tabs__selector"
+                        <button v-for="tab in graphic.tabs" v-on:click="changeTab(tab)" class="graphics__tabs__selector"
                           :style="tabsStyle">
                             <span >{{tab.selector}}</span>
                         </button>
                     </div>
                     <div class="graphics__info">
-                        <g-image  :src="selectedTag" alt="Graphic Image" class="graphics__img"/>
-                        <p class="graphics__info__description">asdas</p>
+                        <g-image  :src="selectedTag.graphic" alt="Graphic Image" class="graphics__img"/>
+                        <p class="graphics__info__description">{{selectedTag.description}}</p>
                     </div>
 
 
@@ -30,7 +30,7 @@
         name: 'tabs',
         data: function () {
             return {
-                selectedTag: ""
+                selectedTag: null
             }
         },
         props: {
@@ -40,8 +40,13 @@
                 required: true
             }
         },
+        methods: {
+          changeTab: function (tab) {
+            this.selectedTag = tab;
+          }
+        },
         mounted() {
-            this.selectedTag = this.graphic.tabs[0].graphic;
+            this.selectedTag = this.graphic.tabs[0];
         },
         computed: {
             tabsStyle :function() {
