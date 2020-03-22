@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .header {
-    background-color: red;
+    background-color: white;
     position: relative;
     height: 6rem;
     z-index: 10;
