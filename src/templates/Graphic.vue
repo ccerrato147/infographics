@@ -3,7 +3,7 @@
         <div class="project">
             <div class="container">
                 <div v-for="tab in $page.graphic.tabs">
-                    <button>{{tab.selector}}</button>
+                    <button v-on:click="selectedTag = tab.selector">{{tab.selector}}</button>
                     <g-image v-if="selectedTag == tab.selector" :src="tab.graphic" alt="Graphic Image" class="graphics__img"/>
                 </div>
 
@@ -17,6 +17,9 @@
             return {
                selectedTag: ""
             }
+        },
+        mounted: function () {
+
         }
     }
 </script>
