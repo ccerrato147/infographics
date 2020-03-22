@@ -1,12 +1,25 @@
 <template>
     <Layout>
-        <div class="content">
-            <button v-for="tab in $page.graphic.tabs">{{tab.selector}}</button>
+        <div class="project">
+            <div class="container">
+                <div v-for="tab in $page.graphic.tabs">
+                    <button>{{tab.selector}}</button>
+                    <g-image v-if="selectedTag == tab.selector" :src="tab.graphic" alt="Graphic Image" class="graphics__img"/>
+                </div>
+
+            </div>
         </div>
     </Layout>
-
 </template>
-
+<script>
+    export default {
+        data: function () {
+            return {
+               selectedTag: ""
+            }
+        }
+    }
+</script>
 
 <page-query>
     query Graphic ($path: String!) {
@@ -23,9 +36,8 @@
 
 <style lang="scss" scoped>
     $content-gutter: 2rem;
-
-    .content {
-        margin-top: #{$content-gutter};
+    .container {
+        padding: 8rem 0 4rem 0;
     }
 </style>
 
