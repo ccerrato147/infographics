@@ -66,6 +66,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import "src/assets/index";
+
     $content-gutter: 2rem;
     .graphics {
         margin-top: 8rem;
@@ -73,6 +75,11 @@
             img{
                 display: inline-block;
                 width: 50%;
+
+                @include respond-to(mobile-and-phablet) {
+                    display: block;
+                    width: 100%;
+                }
             }
             &__description {
                 font-size: 24px;
@@ -80,7 +87,6 @@
                 width: 50%;
                 vertical-align: top;
                 margin: 0;
-                padding: 10px;
             }
         }
         &__tabs {
