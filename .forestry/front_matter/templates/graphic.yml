@@ -21,4 +21,4 @@ fields:
       format: markdown
   label: Description
 pages:
-- graphics/coronavirus.md
+  - graphics/coronavirus.md

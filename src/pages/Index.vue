@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="container">
-      <ProjectsGrid :projects="$page.projects.edges" />
+
     </div>
   </Layout>
 </template>
@@ -23,11 +23,9 @@ query Posts {
 </page-query>
 
 <script>
-import ProjectsGrid from "@/components/ProjectsGrid"
 
 export default {
   components: {
-    ProjectsGrid
   }
 }
 </script>
