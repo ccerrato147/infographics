@@ -2,14 +2,23 @@
 label: Graphic
 hide_body: false
 fields:
-- type: file
-  name: thumbnail
-  label: Thumbnail
-  description: This will only show up on the front page
 - type: text
   name: title
   label: Title
   config:
     required: true
+- type: file
+  name: thumbnail
+  label: Thumbnail
+  description: This will only show up on the front page
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
 pages:
 - graphics/coronavirus.md
