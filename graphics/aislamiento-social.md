@@ -3,6 +3,9 @@ title: Aislamiento Social
 thumbnail: "/uploads/yoencasa.png"
 description: "¡Sigue las recomendaciones de quedarte en casa!"
 tabs:
+- graphic: "/uploads/Brasil.jpg"
+  selector: Brasil
+  description: Brasil
 - graphic: "/uploads/home-coronavirus.jpg"
   selector: México
   description: Special Infographic
