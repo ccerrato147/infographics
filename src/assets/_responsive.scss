@@ -1,0 +1,27 @@
+@mixin respond-to($range) {
+  $mobile-upper-limit: 600px;
+  $phablet-upper-limit: 1024px;
+  $tablet-upper-limit: 1440px;
+
+  @if $range == mobile {
+    @media (max-width: #{$mobile-upper-limit - 1}) {
+      @content;
+    }
+  } @else if $range == phablet {
+    @media (min-width: $mobile-upper-limit) and (max-width: #{$phablet-upper-limit - 1}) {
+      @content;
+    }
+  } @else if $range == tablet {
+    @media (min-width: $phablet-upper-limit) and (max-width: $tablet-upper-limit) {
+      @content;
+    }
+  } @else if $range == tablet-and-phablet {
+    @media (min-width: $mobile-upper-limit) and (max-width: $tablet-upper-limit) {
+      @content;
+    }
+  } @else if $range == mobile-and-phablet {
+    @media (max-width: #{$phablet-upper-limit - 1}) {
+      @content;
+    }
+  }
+}
