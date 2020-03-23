@@ -1,13 +1,13 @@
 <template>
     <div class="graphics">
         <div v-for="{ node } in graphics" class="graphics__entry">
-            <g-link :to="node.path">
-                <g-image :src="node.thumbnail" alt="Graphic Image" class="graphics__img"/>
-            </g-link>
             <div class="graphics__content">
                 <h1>{{ node.title }}</h1>
                 <p>{{ node.description }}</p>
             </div>
+            <g-link :to="node.path">
+                <g-image :src="node.thumbnail" alt="Graphic Image" class="graphics__img"/>
+            </g-link>
         </div>
     </div>
 </template>
