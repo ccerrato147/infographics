@@ -2,7 +2,7 @@
     <header class="header" :class="{sticky: $route.path === '/' || $route.path.includes('/graphics/')}">
         <div class="container">
             <div class="left">
-                <g-link :to="{ name: 'home' }" class="home-link">Infographics</g-link>
+                <g-link :to="{ name: 'home' }" class="home-link">{{settings.site_name}}</g-link>
             </div>
             <nav class="nav right">
                 <a v-for="link in settings.headerLinks" class="nav__link" target="_blank" :href="link.url">{{link.label}}</a>
@@ -47,6 +47,7 @@ export default {
 }
 
 .home-link {
+    color: white;
     text-decoration: none;
     font-size: 1.8rem;
     font-weight: bold;
@@ -80,6 +81,7 @@ export default {
     border-bottom: 1px solid;
     border-color: transparent;
     transition: border 0.15s;
+    color: white;
 }
 .nav > *:last-of-type {
     margin: 0;
